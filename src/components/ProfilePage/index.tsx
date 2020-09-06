@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Container, Banner, Avatar, ProfileData, LocationIcon, CakeIcon, Followage } from './styles';
+import {Container, Banner, Avatar, ProfileData, LocationIcon, CalendarIcon, Followage, EditButton } from './styles';
 
 const ProfilePage: React.FC = () => {
     return (
@@ -9,7 +9,7 @@ const ProfilePage: React.FC = () => {
                 <Avatar />
             </Banner>
             <ProfileData>
-                {/* <EditButton outlined>Editar perfil</EditButton> */}
+                <EditButton outlined>Editar perfil</EditButton>
                 <h1>Felipe Ribeiro</h1>
                 <h2>@lfeliperib</h2>
                 <p>Front-end Developer and designer</p>
@@ -19,8 +19,8 @@ const ProfilePage: React.FC = () => {
                         São Paulo, Brasil
                     </li>
                     <li>
-                        <CakeIcon />
-                        Nascido(a) em 2 de agosto de 1983
+                        <CalendarIcon />
+                        Ingressou em novembro de 2013
                     </li>
                 </ul>
                 <Followage>

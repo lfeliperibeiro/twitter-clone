@@ -1,5 +1,8 @@
 import React from 'react';
 
+import StickBox from 'react-sticky-box';
+
+import News from '../News';
 import List from '../List';
 import FollowSugestion from '../FollowSugestion';
 
@@ -18,6 +21,7 @@ const SideBar: React.FC = () => {
                 <SearchInput placeholder="Buscar no Twitter" />
                 <SerachIcon />
             </SearchWrapper>
+            <StickBox>
             <Body>
                 <List
                 title="Talvez você curta"
@@ -25,31 +29,49 @@ const SideBar: React.FC = () => {
                    <FollowSugestion 
                    name="Mestre Yoda"
                    nickname="@yodamestre"
-                   />
-                ]}
-                />
-
-                <List
-                title="Talvez você curta"
-                elements={[
+                   />,
                    <FollowSugestion 
                    name="Luke"
                    nickname="@luke_skywalker"
-                   />
-                ]}
-                />
-
-                <List
-                title="Talvez você curta"
-                elements={[
+                   />,
                    <FollowSugestion 
                    name="Han Solo"
                    nickname="@solo_han"
                    />
+                   
                 ]}
                 />
+
+                <List
+                title="O que está acontecendo"
+                elements={[
+                   <News />,
+                   <News />,
+                   <News />
+                ]}
+                />
+                <List
+                title="O que está acontecendo"
+                elements={[
+                   <News />,
+                   <News />,
+                   <News />
+                ]}
+                />
+                <List
+                title="O que está acontecendo"
+                elements={[
+                   <News />,
+                   <News />,
+                   <News />
+                ]}
+                />
+
+               
+
                
             </Body>
+            </StickBox>
         </Container>
 
     )

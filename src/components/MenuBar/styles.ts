@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components';
 
-import {Home, Notifications, Email, FavoriteBorder, Person, ExitToApp, Ubuntu} from '../../styles/Icons';
+import {Home, Notifications, Email, FavoriteBorder, Person, ExitToApp,Twitter} from '../../styles/Icons';
 
 export const Container = styled.div`
     display: none;
@@ -31,7 +31,7 @@ export const Topside = styled.div`
     }
 `;
 
-export const Logo = styled(Ubuntu)`
+export const Logo = styled(Twitter)`
     width: 41px;
     height: 41px;
 

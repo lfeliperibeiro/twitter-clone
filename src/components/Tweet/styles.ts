@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 import {Chat, Ubuntu, Favorite } from '../../styles/Icons';
 
@@ -125,10 +125,43 @@ export const Icons = styled.div`
 
 `;
 
-export const Status = styled.div``;
+export const Status = styled.div`
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    > svg {
+        margin-right: 5px;
+    }
 
-export const CommentIcon = styled.div``;
+    &:nth-child(1) {
+        &,
+        > svg path{
+            color: var(--gray);
+        }
+    }
+    &:nth-child(2) {
+        color: var(--retweet);
 
-export const RetweetIcon = styled.div``;
+        > svg path {
+            color: var(--retweet);
+        } 
+    }
+    &:nth-child(3) {
+        color: var(--like);
 
-export const LikeIcon = styled.div``;
+        > svg {
+            fill: var(--like);
+        }
+    } 
+`;
+
+const IconCSS = css`
+    width: 19px;
+    height:19px;
+`
+
+export const CommentIcon = styled(Chat)`${IconCSS}`;
+
+export const RetweetIcon = styled(Ubuntu)`${IconCSS}`;
+
+export const LikeIcon = styled(Favorite)`${IconCSS}`;
